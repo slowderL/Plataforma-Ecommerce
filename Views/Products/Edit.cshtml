@@ -1,0 +1,99 @@
+﻿@model ProductDto
+@{
+}
+
+<link rel="stylesheet" href="~/css/Style.css" />
+
+<div class="container mt-5">
+    <div class="col-lg-8 mx-auto card-dark">
+        <h2 class="text-center mb-4 fw-bold">Editar Produto</h2>
+        <hr class="mb-4">
+
+        <form method="post" enctype="multipart/form-data">
+
+            <!-- ID -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label fw-semibold">ID</label>
+                <div class="col-sm-9">
+                    <input class="form-control-plaintext fw-semibold" readonly value="@ViewData["ProductId"]">
+                </div>
+            </div>
+
+            <!-- Nome -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label fw-semibold">Nome</label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Name" placeholder="Digite o nome do produto">
+                    <span asp-validation-for="Name" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <!-- Marca -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label fw-semibold">Marca</label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Brand" placeholder="Ex: Samsung, Dell, Apple">
+                    <span asp-validation-for="Brand" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <!-- Categoria -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label fw-semibold">Categoria</label>
+                <div class="col-sm-9">
+                    <select class="form-select" asp-for="Category">
+                        <option disabled selected>Selecione...</option>
+                        <option value="Outros">Outros</option>
+                        <option value="Eletrônicos">Eletrônicos</option>
+                        <option value="Celular">Celulares</option>
+                        <option value="Computadores">Computadores</option>
+                        <option value="Notebooks">Notebooks</option>
+                        <option value="Acessorios">Acessórios</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Preço -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label fw-semibold">Preço</label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Price" placeholder="R$ 0,00">
+                    <span asp-validation-for="Price" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <!-- Descrição -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label fw-semibold">Descrição</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" asp-for="Description" rows="3" placeholder="Descreva o produto..."></textarea>
+                    <span asp-validation-for="Description" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <!-- Criado em -->
+            <div class="mb-4 row">
+                <label class="col-sm-3 col-form-label fw-semibold">Criado em</label>
+                <div class="col-sm-9">
+                    <input class="form-control-plaintext" readonly value="@ViewData["CreatedAt"]">
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="row mt-4">
+                <div class="col-sm-6 d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg fw-semibold shadow-sm">
+                        Atualizar
+                    </button>
+                </div>
+                <div class="col-sm-6 d-grid">
+                    <a class="btn btn-secondary btn-lg fw-semibold shadow-sm"
+                       asp-controller="Products" asp-action="Index">
+                        Cancelar
+                    </a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

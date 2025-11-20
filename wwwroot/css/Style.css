@@ -1,0 +1,89 @@
+﻿
+body {
+    background-color: #121212;
+    color: #e6e6e6;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.dark-card {
+    background: #1e1e1e;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    border: 1px solid #2a2a2a;
+}
+
+label {
+    color: #cccccc;
+    font-weight: 600;
+}
+
+.form-control,
+.form-select,
+.form-control-plaintext {
+    background-color: #222;
+    color: #e6e6e6;
+    border: 1px solid #333;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        background-color: #262626;
+        color: #ffffff;
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+    .btn-primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0b5ed7;
+    }
+
+.btn-secondary {
+    background-color: #343a40;
+    border-color: #343a40;
+    color: #e6e6e6;
+}
+
+    .btn-secondary:hover {
+        background-color: #23272b;
+        border-color: #23272b;
+    }
+
+h1, h2, h3, h4 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.table {
+    color: #e6e6e6;
+}
+
+    .table thead {
+        background: #1f1f1f;
+    }
+
+    .table tbody tr {
+        background: #1a1a1a;
+    }
+
+        .table tbody tr:hover {
+            background: #262626;
+        }
+
+a {
+    color: #63a4ff;
+}
+
+    a:hover {
+        color: #8cbaff;
+    }
+
+hr {
+    border-top: 1px solid #333;
+}
